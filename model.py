@@ -118,4 +118,4 @@ class OSELM(object):
     if t is not None :
       print("Accuracy: {:.9f}".format(
         self._sess.run(self._accuracy, {self._X1:x, self._T1:t})))
-    else : return self._sess.run(self._fx)
+    else : return self._sess.run(self._fx , {self._X1:x})
