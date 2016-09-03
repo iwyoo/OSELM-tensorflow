@@ -3,7 +3,10 @@ Online Sequential Extreme Learning Machine with TensorFlow
 
 ## Toy example (MNIST)
 ```bash
-python mnist.py
+$ python mnist.py
+batch_size : 1100
+hidden_num : 1000
+Accuracy: 0.928800106
 ```
 
 MNIST data set : http://yann.lecun.com/exdb/mnist/

@@ -10,8 +10,8 @@ sess = tf.Session()
 mnist = input_data.read_data_sets("/tmp/data/", one_hot=True)
 
 # Construct ELM
-batch_size = 1000
-hidden_num = 150
+batch_size = 1100
+hidden_num = 1000
 print("batch_size : {}".format(batch_size))
 print("hidden_num : {}".format(hidden_num))
 
@@ -20,7 +20,7 @@ elm = OSELM(sess, batch_size, 784, hidden_num, 10)
 # one-step feed-forward training
 k = batch_size
 while k <= mnist.train.num_examples:
-  print("batch : {}".format(k))
+  #print("batch : {}".format(k))
   train_x, train_y = mnist.train.next_batch(batch_size)
   elm.train(train_x, train_y)
   k += batch_size
